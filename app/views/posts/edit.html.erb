@@ -1,0 +1,12 @@
+<h1>Edit Post</h1>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class =>'back-link') %>
+
+<%= form_for(:post, :url => {:action => 'update', :id => @post.id}) do |f| %>
+	  
+	   <%= render(:partial => "form", :locals => {:f => f}) %>
+
+	   <div class= "form-buttons">
+	   	  <%= submit_tag("Update Post") %>
+	   </div>
+<% end %>

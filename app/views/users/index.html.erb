@@ -1,0 +1,32 @@
+<h2>Users</h2>
+
+<%= link_to("Add New User", {:action => 'new'}, :class => 'action new') %>
+
+<table class="listing" summary="Page list">
+<tr class="header">
+  <th>ID</th>
+  <th>User Name</th>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Email</th>
+  <th>Posts</th>
+  <th>Admin?</th>
+  <th>Actions</th>
+</tr>
+<% @users.each do |user| %>
+<tr>
+  <td><%= user.id %></td>
+  <td><%= user.username %></td>
+  <td><%= user.first_name %></td>
+  <td><%= user.last_name %></td>
+  <td><%= user.email %></td>
+  <td><%= user.posts.size %></td>
+  <td><%= user.admin %></td>
+  <td class="actions">
+    <%= link_to("Show", '#', :class => 'action show') %>
+    <%= link_to("Edit", '#', :class => 'action edit') %>
+    <%= link_to("Delete", '#', :class => 'action delete') %>
+  </td>
+</tr>
+<% end %>
+</table>

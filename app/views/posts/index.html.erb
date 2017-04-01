@@ -1,0 +1,22 @@
+<h1>Listados de Posts</h1>
+<p>Agregar bootstrap/validación/nombre usuario</p>
+
+
+	<table class = "listing" summary = "Subject list">
+		<tr class = " header">
+			<th>Title</th>
+			<th>Body</th>
+			<th>Actions</th>
+		</tr>
+		<% @posts.each do |post| %>
+		<tr class = "<%= cycle('odd', 'even') %>">
+			<td> <%= post.title %> </td>
+			<td> <%= post.body %> </td>
+			<td class= "actions">
+				<%= link_to("Show", '#', :class => 'action show') %>
+				<%= link_to("Edit", {:action => 'edit', :id => post.id}, :class => 'action edit') %>
+				<%= link_to("Delete", '#', :class => 'action delete') %>
+			</td>
+		</tr>
+		<% end %>
+	</table>

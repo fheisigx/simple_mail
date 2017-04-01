@@ -1,0 +1,13 @@
+<p>
+    <%= f.label(:user_id, "User") %><br>
+    <%= f.select(:user_id, @users.map {|s| [s.username, s.id]}) %>
+</p>
+
+<p>
+	<%= f.label :title %> <br>
+	<%= f.text_field :title %>
+</p>
+<p>
+	<%= f.label :body %> <br>
+	<%= f.text_field :body %>
+</p>

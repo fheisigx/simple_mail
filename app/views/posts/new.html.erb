@@ -1,0 +1,10 @@
+<h1>Add Post</h1>
+
+<%= form_for(:post, :url => {:action => 'create'}) do |f| %>
+	  
+	   <%= render(:partial => "form", :locals => {:f => f}) %>
+
+	   <div class= "form-buttons">
+	   	  <%= submit_tag("Create Post") %>
+	   </div>
+<% end %>
