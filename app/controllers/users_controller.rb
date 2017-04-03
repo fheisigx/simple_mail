@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
   end
 
   def new
@@ -16,7 +17,7 @@ class UsersController < ApplicationController
     #redirect_to(:action => 'index')
     if @user.save
 
-      flash[:notice] = "User created successfully"
+      flash[:success] = "Welcome to the Sample App!"
       redirect_to(:action => 'index')
       #redirec_to @post
     else
@@ -38,7 +39,7 @@ class UsersController < ApplicationController
   end
   
   def post_params
-    params.require(:user).permit(:username, :first_name)
+    params.require(:user).permit(:username, :first_name, :last_name, :email, :password, :password_confirmation, :admin)
   end
 
 end

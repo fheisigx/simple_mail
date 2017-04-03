@@ -1,34 +1,30 @@
-<%= error_messages_for(@user) %>
+<%= render 'shared/error_messages' %>
 
 <p>
 	<%= f.label :username %> <br>
-	<%= f.text_field :username %>
+	<%= f.text_field :username, class: 'form-control' %>
 </p>
 <p>
 	<%= f.label :password %> <br>
-	<%= f.text_field :password %>
+	<%= f.password_field :password, class: 'form-control' %>
+</p>
+<p>
+    <%= f.label :password_confirmation, "Confirmation" %>
+    <%= f.password_field :password_confirmation, class: 'form-control' %>
 </p>
 <p>
 	<%= f.label :first_name %> <br>
-	<%= f.text_field :first_name %>
+	<%= f.text_field :first_name, class: 'form-control' %>
 </p>
 <p>
 	<%= f.label :last_name %> <br>
-	<%= f.text_field :last_name %>
+	<%= f.text_field :last_name, class: 'form-control' %>
 </p>
 <p>
 	<%= f.label :email %> <br>
-	<%= f.text_field :email %>
+	<%= f.text_field :email, class: 'form-control' %>
 </p>
 <p>
 	<%= f.label :admin %> <br>
-	<%= f.text_field :admin %>
-</p>
-<p>
-	<%= f.label :first_name %> <br>
-	<%= f.text_field :first_name %>
-</p>
-<p>
-	<%= f.label :password %> <br>
-	<%= f.text_field :password %>
+	<%= f.text_field :admin, class: 'form-control' %>
 </p>
