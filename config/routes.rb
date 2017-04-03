@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
 
+  get  '/help',    to: 'pages#help'
+  get  '/contact', to: 'pages#contact'
+  get '/signup', to: 'users#new'
 
-  get 'access/index'
-
-  get 'access/login'
-
-  root 'posts#index', as: 'home' #No estaba esto, eliminar?
+  root 'users#index'#, as: 'home' #No estaba esto, eliminar?
 
   get 'about' => 'pages#about', as: 'about'
   match ':controller(/:action(/:id))', :via => [:get, :post]
